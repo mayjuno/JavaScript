@@ -1,2 +1,6 @@
+document.write('<h2>Coding Area</h2>');
 console.log('Hello World!');
-document.write('<h1>Testing git</h1>');
+let a  = 1
+let b = 2
+let c = a+b
+console.log(c)
