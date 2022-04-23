@@ -1,4 +1,4 @@
-document.write('<h2>JavaScript Area</h2>');
+// document.write('<h2>JavaScript Area</h2>');
 /* console.log('Hello World!');
 let a  = 1
 let b = 2
@@ -529,7 +529,361 @@ substring()
 // }
 
 /*==============================
-    Objects in JavaScript
+    Objects in JavaScript part 1
         Exercise 24:
  ===============================*/
+// document.write('<h3>Objects in JavaScript</h3><br>')
+
+// var car_manufacturer = "Audi";
+// var car_model = 'Q7';
+// var price = 50000;
+// function allwheeldrive(){
+//     document.write('This car is from Quattro all wheels drive.')
+// }
+// allwheeldrive();
+
+// var car = {
+//     manufactuer: 'Audi',
+//     model : 'Q7',
+//     driving_mode : '4WD',
+//     price : 50000,
+//     allwheeldrive : function() {
+//         return(`This car is from ${this.manufactuer} ${this.model} ${this.driving_mode} drive.<br>`)
+//     }
+// }
+// document.write(car.allwheeldrive());
+// document.write('price is ',car.price,'$.<br>');
+
+// function cars(company,model,price,drive_type,fuel='Ortain') {
+//     this.company = company;
+//     this.model = model;
+//     this.price = price;
+//     this.drive_type = drive_type;
+//     this.fuel = fuel;
+//     this.info = function() {
+//         document.write(`This is car is manufactured by ${this.company} ${this.model} ${this.drive_type} drive ${this.fuel} engine.<br>`);
+//         document.write(`Price is ${this.price}.<br>`);
+//     }
+
+// }
+// var c1 = new cars('Audi','Q7',50000,'4WD')
+// c1.info()
+// var c2 = new cars('Toyotar','Crown',50000,'Rear Drive','Disal')
+// c2.info()
+// // updating the objects properties
+// c2.price = 120000;
+// c2.info()
+// // adding the objects properties
+// c1.color = 'Black';
+// document.write(`Color is ${c1.color}.<br>`)
+// // deleting the objects properties and methods
+// var c3 = new cars('Toyotar','Crown',50000,'Rear Drive','Disal')
+// delete c3.price;
+// c3.info()
+/*==============================
+    Objects in JavaScript part 2
+        Exercise 25:
+ ==============================*/
+
+/*==============================
+    Math Objects in JavaScript 
+        Exercise 26:
+ ==============================*/
+
+ /* 
+    JavaScript Math Objects Methods
+abs(x) Returns the absolute value of x
+acos(x) Returns the arccosine of x , in radians
+acosh(x) Returns the hyperbolic arccosine of x
+asin(x) Returns the arcsine of x, in radians
+asinh(x) Return the hyperbolic arcsine of x
+atan(x) Returns the arctanget of x s a numeric value between -Pi/2 and Pi/2 radians
+atan2(x) Returns the arctangent of the quotient og its arquments
+atanh(x) Returns the hyperbolic arctangent of x
+cbrt(x) Returns the cubic root of x
+celi(x) Returns x , rounded upwords to the nearest integer
+
+ */
+
+/*==============================
+    Object Literal in JavaScript 
+        Exercise 27:
+ ==============================*/
+// var rectangle_obj_litreal = {
+//     length : 5,
+//     width : 10,
+//     getArea : function (){
+//         return this.length*this.width;
+//     },
+//     getParameter : function (){
+//         return 2*(this.length+this.width);
+//     }
+// };
+// document.write(`The lenght of rectangle is ${rectangle_obj_litreal.length}.<br>`)
+// document.write(`The with of rectangle is ${rectangle_obj_litreal.width}.<br>`)
+// document.write(`The area of rectangle is ${rectangle_obj_litreal.getArea()}.<br>`)
+// document.write(`The parameter of rectangle is ${rectangle_obj_litreal.getParameter()}.<br>`)
  
+/*==============================
+    Date Objects in JavaScript 
+        Exercise 28:
+ ==============================*/
+//// One Second write
+//  var s = 0;
+//  function oneSecond() {
+//      s +=1;
+//      document.write(`${s}s<br>`);
+//  }
+//  setInterval('oneSecond()',1000);
+
+// var now = new Date(2022,3,23,18,51);
+// document.write(now)
+
+// var now = new Date("Aprial 23 2022 18:53:00");
+// document.write(now)
+
+/* JavaScript Date Object Methods
+=================================
+Date()
+getDate()
+getDay()
+getFullYear()
+getHour()
+getMilliseconds()
+getMinutes()
+getMonth()
+getSeconds()
+getTime()
+
+etc...
+*/ 
+///* Exercise 28 Creating a clock */
+// function clock(){
+//     var cd = new Date();
+//     var hours = cd.getHours();
+//     var minutes = cd.getMinutes();
+//     var seconds = cd.getSeconds();
+//     document.write(`${hours}:${minutes}:${seconds}<br>`)
+// }
+// setInterval('clock()',1000);
+
+ /*==============================
+    Object Constructor in JavaScript 
+        Exercise 29:
+ ==============================*/
+//  var rectangle_obj_constructor = new Object(); //var obj_name = {};
+//  rectangle_obj_constructor.length = 5;
+//  rectangle_obj_constructor.width = 10;
+//  rectangle_obj_constructor.getArea = function (){
+//     return this.length*this.width;
+//  };
+// rectangle_obj_constructor.getParameter = function (){
+//     return 2*(this.length+this.width);
+// };
+// document.write(`The lenght of rectangle is ${rectangle_obj_constructor.length}.<br>`)
+// document.write(`The with of rectangle is ${rectangle_obj_constructor.width}.<br>`)
+// document.write(`The area of rectangle is ${rectangle_obj_constructor.getArea()}.<br>`)
+// document.write(`The parameter of rectangle is ${rectangle_obj_constructor.getParameter()}.<br>`)
+
+/*============================== 
+   Object Constructor function Methods 
+  ==============================*/
+
+// function rectangle_obj_constructor_func(length,width){
+//     this.length = length;
+//     this.width = width;
+//     this.getArea = function(){
+//         return length*width;
+//     };
+//     this.getParameter = function(){
+//         return 2*(length+width);
+//     }
+// }
+// var rec_obj_con_func_obj = new rectangle_obj_constructor_func(5,10);
+// document.write(`The lenght of rectangle is ${rec_obj_con_func_obj.length}.<br>`)
+// document.write(`The with of rectangle is ${rec_obj_con_func_obj.width}.<br>`)
+// document.write(`The area of rectangle is ${rec_obj_con_func_obj.getArea()}.<br>`)
+// document.write(`The parameter of rectangle is ${rec_obj_con_func_obj.getParameter()}.<br>`)
+
+ /*==============================
+    Object Prototype in JavaScript 
+        Exercise 30:
+ ==============================*/
+// // object literal method
+//  var abc = {
+//      Name :'William',
+//      Subject :'JavaScript',
+//      Address :'Mandalay'
+//  };
+//  console.log(abc);
+// // object constructor method
+//  function xyz(name,subject,address) {
+//      this.name = name;
+//      this.subject = subject;
+//      this.address = address;
+//  }
+//  xyz.prototype.getName = function(){
+//      return this.name;
+//  }
+//  xyz.prototype.getAddress = function(){
+//      return this.address;
+//  }
+// // /* add the object proparties */
+// // xyz.job = 'Software Developer'
+// // /* Adding the object proparties by prototype */
+// xyz.prototype.job = 'Software Developer';
+//  var x1 = new xyz('Raymond','Python','Australia');
+//  console.log(x1)
+
+
+ /*==============================
+    Prototypal Inheritance in JavaScript 
+        Exercise 31:
+ ==============================*/
+
+//  const Employee = {
+//      Post : function (){
+//          return "A software developer";
+//      },
+//      changeName : function (name){
+//          this.name = name;
+//      }
+//  };
+// /* I think that is object constructor method */
+//  var e1 = Object.create(Employee);
+//  e1.name = "William";
+//  e1.role = "Writer";
+//  e1.changeName('Raymond');
+//  console.log(e1)
+
+// /*I think that is object literal method */
+
+// var e1 = Object.create(Employee,{
+//     name : {value: "William", writable: true}, // the different with constructor method
+//     role : {value: "Writer"}
+// })
+// e1.changeName('Raymond');
+// console.log(e1)
+
+/* I think that is object constructor function method */
+// function Employee(name,id,salary){
+//     this.name = name;
+//     this.id = id;
+//     this.salary = salary;
+// }
+// Employee.prototype.post = function(){
+//     return (this.name+" "+"is content creator");
+// }
+// Employee.prototype.changeName = function(name){
+//     return (this.name=name);
+// }
+
+// var e1 = new Employee('William','007',20000);
+// console.log(e1)
+// console.log(e1.post());
+// console.log(e1.name)
+// e1.changeName('Raymond');
+// console.log(e1.name)
+// console.log(e1)
+
+// /* Now create a new object constructor its prototype inheritance from Employee */
+// function Programmer(name,id,salary,language){
+//     //protertises Inheritance from the Employee 
+//     Employee.call(this,name,id,salary);
+//     this.language = language;
+// }
+// /* This is important 2 parts 
+// ============================ */
+// // 1.methos Inheritance from the Employee
+// Programmer.prototype = Object.create(Employee.prototype)
+// // 2.add constructor
+// Programmer.prototype.constructor = Programmer;
+// // creating a new object
+
+// var e_programmer = new Programmer('Kyaw Myo Swe','006',25000,'JavaScript');
+// console.log(e_programmer);
+// e_programmer.changeName('mayjuno');
+// console.log(e_programmer);
+// console.log(e_programmer.post());
+
+/* =====================================
+    Classes and inheritance in JavaScript
+            Exercise 32:
+    classes is introduced in ES6
+  ======================================*/
+
+// class Student {
+//     constructor(name,age,roll){
+//         this.name = name;
+//         this.age = age;
+//         this.roll = roll;        
+//     }
+//     // Creating tha method no need any other, only need method name and () eg; chaneName()
+//     Org(){
+//         return (`I\'m ${this.name} from Mandalay.`);
+//     }
+//     dob(){
+//         return(`The date of birth of ${this.name} is ${2022-this.age}.`);
+//     }
+//     // creating a static method
+//     static add(a,b){
+//         return a+b; 
+//     }
+// }
+// // Creating the inheritanced child class
+// class ComputerStudent extends Student{
+//     constructor(name,age,roll,number_of_subject,language,section){
+//         super(name,age,roll);
+//         this.number_of_subject = number_of_subject;
+//         this.language = language;
+//         this.section = section;
+//     }
+// }
+// // creating an object
+// var kms = new Student('Kyaw Myo Swe',43,420);
+// console.log(kms);
+// console.log(kms.dob());
+// console.log(kms.Org());
+// console.log(Student.add(10,20));
+
+// // creating an object instanceof child class
+// var raymond = new ComputerStudent('Raymond',12,420,9,'Python','A');
+// console.log(raymond);
+// console.log(raymond.dob());
+// console.log(raymond.Org());
+// console.log(ComputerStudent.add(2022,5));
+
+/* =====================================
+    DOM Manipulation in JavaScript part-1
+            Exercise 33:
+  ======================================*/
+//  /* window.prompt() */
+//   document.write(`<h3>Window object in JS and DOM manipulation.</h3>`)
+//   var x = parseInt(prompt('Enter the value of x :'))
+//   var y = parseInt(prompt('Enter the value of y :'))
+//   document.write(`x = ${x}<br>`)
+//   document.write(`y = ${y}<br>`)
+//   document.write(`x + y = ${x+y}<br>`)
+
+///* window.confirm()*/
+// var a = confirm("Are you sure?")
+// console.log(a) // This return true or false value
+
+// /* window.innerHight /window.inndrWidth */
+// var document_height = window.innerHeight;
+// var document_width = window.innerWidth;
+// console.log(document_height,document_width)
+
+// function button(){
+//     //window.alert('You clicked me?')
+//     //document.getElementById("heading").innerHTML = "You Clicked the Button!"
+//    var message = document.getElementById("heading").innerHTML;
+//    window.alert(message);
+// }
+// //button();
+
+/*======================================
+Website layout and DOM in JavaScript 
+        Exercise 35:
+=======================================*/
+
