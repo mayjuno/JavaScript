@@ -1,0 +1,20 @@
+.left{
+    background-color: crimson;
+}
+.right{
+    background-color:darkblue;
+}
+.center{
+    background-color:gold;
+}
+.size{
+    font-size:smaller; color:bisque;
+}
+#one{
+    font-weight: bolder;
+}
+#img-lisa{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 100%;
+}
