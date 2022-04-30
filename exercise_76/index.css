@@ -1,0 +1,22 @@
+h1.title{
+    background-color: black;
+    color: white;
+}
+
+.box{
+    float: left;
+    background-color: bisque;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.image{
+    border-radius: 40%;
+}
+.invisible{
+    display: none;
+}
